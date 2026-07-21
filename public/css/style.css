@@ -283,6 +283,7 @@ footer hr {
     color:white;
 
     box-shadow:0 15px 40px rgba(0,0,0,.4);
+    animation:fadeIn .6s ease;
 
 }
 
@@ -334,6 +335,8 @@ footer hr {
     cursor:pointer;
 
     transition:.3s;
+    font-weight:600;
+    letter-spacing:.5px;
 }
 
 .login-card button:hover{
