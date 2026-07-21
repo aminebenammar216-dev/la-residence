@@ -1,0 +1,31 @@
+<section id="houses">
+
+    <h2>{{ titresection }}</h2>
+
+    <div class="houses-container">
+
+        {% for maison in maisons %}
+
+            <div class="house-card">
+
+                <img
+                    src="/images/{{ maison.image }}"
+                    alt="{{ maison.nom }}"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                >
+
+                <h3>{{ maison.nom }}</h3>
+
+                <p>{{ maison.description }}</p>
+
+                <p><strong>{{ maison.prix }} TND</strong></p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>

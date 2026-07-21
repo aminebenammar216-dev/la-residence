@@ -1,0 +1,358 @@
+:root {
+    --primary-color: #1f5c3a;
+    --secondary-color: #f8f9fa;
+    --text-color: #222;
+    --border-color: #ddd;
+}
+
+/* ===========================
+   GENERAL
+=========================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    padding: 60px 40px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h2 {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+#hero {
+    height: 80vh;
+    background-image: url('../images/residence.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(255,255,255,0.85);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ===========================
+   PRESENTATION
+=========================== */
+
+#presentation {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+#presentation h2 {
+    color: var(--primary-color);
+}
+
+/* ===========================
+   HOUSES
+=========================== */
+
+#houses h2 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.houses-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.house-card {
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+}
+
+.house-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.house-card h3,
+.house-card p {
+    padding: 0 15px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 60px 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-info,
+.footer-map {
+    flex: 1;
+}
+
+.footer-info h2,
+.footer-map h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-info p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+    border-radius: 10px;
+}
+
+footer hr {
+    margin: 40px 0 20px;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,.3);
+}
+
+.copyright {
+    text-align: center;
+    color: rgba(255,255,255,.8);
+    margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .houses-container {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.login-page{
+    height:100vh;
+
+    background:url("../images/residence.jpg") center/cover no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+
+    width:420px;
+
+    padding:45px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+}
+
+.login-card h1{
+    margin:0;
+    font-size:40px;
+}
+
+.login-card p{
+    margin-bottom:35px;
+    opacity:.8;
+}
+
+.login-card input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+}
+
+.login-card button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:#1f5c3a;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.login-card button:hover{
+
+    background:#17462d;
+
+    transform:translateY(-2px);
+
+}
+
+.alert{
+
+    background:#d9534f;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+    color:white;
+}

@@ -1,0 +1,36 @@
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-info">
+
+            <h2>Contact</h2>
+
+            {% if config %}
+                <p>📧 {{ config.email }}</p>
+                <p>📞 {{ config.telephone }}</p>
+                <p>📍 {{ config.adresse }}</p>
+            {% endif %}
+
+        </div>
+
+        <div class="footer-map">
+
+            <h2>Notre Localisation</h2>
+
+            <iframe
+                src="https://www.google.com/maps?q=La+Soukra+Ariana+Tunisie&output=embed"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 La Résidence - Tous droits réservés
+    </p>
+
+</footer>
