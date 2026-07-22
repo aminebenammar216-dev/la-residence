@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 
+use EasyCorp\Bundle\EasyAdminBundle\Config\UserMenu;
+use Symfony\Component\Security\Core\User\UserInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use App\Controller\Admin\MaisonCrudController;
 use App\Controller\Admin\ConfigCrudController;
@@ -33,8 +35,9 @@ public function index(): Response
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('La Residence');
+            ->setTitle('🏡 Administration - La Résidence');
     }
+
     public function configureMenuItems(): iterable
 {
     yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
@@ -50,7 +53,16 @@ public function index(): Response
         'Config',
         'fas fa-address-book'
     );
+    yield MenuItem::linkToRoute(
+    'Retour au site',
+    'fas fa-arrow-left',
+    'app_home'
+    );
 }
-
-   
+public function configureUserMenu(UserInterface $user): UserMenu
+{
+    return UserMenu::new()
+        ->setName($user->getUserIdentifier())
+        ->setAvatarUrl('https://ui-avatars.com/api/?name=Admin&background=1f5c3a&color=fff');
+}
 }
